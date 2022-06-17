@@ -72,7 +72,7 @@ namespace Кликер
                 money -= sumWorker; //Деньги тратятся
                 sumWorker *= 2; //Цена на обилку умнодается на два
                 numberWorker++; //Сколько раз улучшил
-                incomeWorker += 2; //+ 2 клика
+                incomeWorker += 4; //+ 4 клика
                 points.Text = $"{money}$"; //Обновляет статистику
                 int number = numberWorker;
                 int sum = sumWorker;

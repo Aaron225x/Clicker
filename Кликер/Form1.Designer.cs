@@ -44,6 +44,7 @@ namespace Кликер
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.points = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -65,7 +66,7 @@ namespace Кликер
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(509, 450);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(414, 451);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -85,16 +86,16 @@ namespace Кликер
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(503, 219);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(408, 220);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // Click
             // 
             this.Click.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Click.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Click.Location = new System.Drawing.Point(170, 76);
+            this.Click.Location = new System.Drawing.Point(138, 76);
             this.Click.Name = "Click";
-            this.Click.Size = new System.Drawing.Size(161, 67);
+            this.Click.Size = new System.Drawing.Size(130, 67);
             this.Click.TabIndex = 0;
             this.Click.Text = "CLICK";
             this.Click.UseVisualStyleBackColor = true;
@@ -106,13 +107,13 @@ namespace Кликер
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Controls.Add(this.improveWorkerButton, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.improveWorker, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(337, 149);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(274, 149);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.29851F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38.80597F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.28986F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(163, 67);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(131, 67);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // improveWorkerButton
@@ -120,7 +121,7 @@ namespace Кликер
             this.improveWorkerButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.improveWorkerButton.Location = new System.Drawing.Point(3, 30);
             this.improveWorkerButton.Name = "improveWorkerButton";
-            this.improveWorkerButton.Size = new System.Drawing.Size(157, 20);
+            this.improveWorkerButton.Size = new System.Drawing.Size(125, 20);
             this.improveWorkerButton.TabIndex = 0;
             this.improveWorkerButton.Text = "Апгрейд рабочего";
             this.improveWorkerButton.UseVisualStyleBackColor = true;
@@ -133,7 +134,7 @@ namespace Кликер
             this.improveWorker.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.improveWorker.Location = new System.Drawing.Point(3, 0);
             this.improveWorker.Name = "improveWorker";
-            this.improveWorker.Size = new System.Drawing.Size(157, 27);
+            this.improveWorker.Size = new System.Drawing.Size(125, 27);
             this.improveWorker.TabIndex = 1;
             this.improveWorker.Text = "0x   100$";
             this.improveWorker.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -144,13 +145,13 @@ namespace Кликер
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Controls.Add(this.improveToolButton, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.improveTool, 0, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(170, 149);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(138, 149);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 3;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38.80597F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.29851F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.28986F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(161, 67);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(130, 67);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // improveToolButton
@@ -158,7 +159,7 @@ namespace Кликер
             this.improveToolButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.improveToolButton.Location = new System.Drawing.Point(3, 29);
             this.improveToolButton.Name = "improveToolButton";
-            this.improveToolButton.Size = new System.Drawing.Size(155, 21);
+            this.improveToolButton.Size = new System.Drawing.Size(124, 21);
             this.improveToolButton.TabIndex = 0;
             this.improveToolButton.Text = "Апгрейд клика";
             this.improveToolButton.UseVisualStyleBackColor = true;
@@ -171,7 +172,7 @@ namespace Кликер
             this.improveTool.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.improveTool.Location = new System.Drawing.Point(3, 0);
             this.improveTool.Name = "improveTool";
-            this.improveTool.Size = new System.Drawing.Size(155, 26);
+            this.improveTool.Size = new System.Drawing.Size(124, 26);
             this.improveTool.TabIndex = 1;
             this.improveTool.Text = "0x   10$";
             this.improveTool.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -181,21 +182,22 @@ namespace Кликер
             this.tableLayoutPanel5.ColumnCount = 1;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel5.Controls.Add(this.clear, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.button1, 0, 0);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 149);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 3;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.73913F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 59.42029F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.28986F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(161, 67);
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38.80597F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.29851F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.40298F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(129, 67);
             this.tableLayoutPanel5.TabIndex = 3;
             // 
             // clear
             // 
             this.clear.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.clear.Location = new System.Drawing.Point(3, 17);
+            this.clear.Location = new System.Drawing.Point(3, 29);
             this.clear.Name = "clear";
-            this.clear.Size = new System.Drawing.Size(155, 33);
+            this.clear.Size = new System.Drawing.Size(123, 21);
             this.clear.TabIndex = 0;
             this.clear.Text = "Выход";
             this.clear.UseVisualStyleBackColor = true;
@@ -215,7 +217,7 @@ namespace Кликер
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(503, 219);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(408, 219);
             this.tableLayoutPanel6.TabIndex = 1;
             // 
             // points
@@ -223,9 +225,9 @@ namespace Кликер
             this.points.AutoSize = true;
             this.points.Dock = System.Windows.Forms.DockStyle.Fill;
             this.points.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.points.Location = new System.Drawing.Point(94, 73);
+            this.points.Location = new System.Drawing.Point(77, 73);
             this.points.Name = "points";
-            this.points.Size = new System.Drawing.Size(314, 73);
+            this.points.Size = new System.Drawing.Size(253, 73);
             this.points.TabIndex = 0;
             this.points.Text = "0$";
             this.points.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -236,12 +238,22 @@ namespace Кликер
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(123, 20);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Достижения";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(509, 450);
+            this.ClientSize = new System.Drawing.Size(414, 451);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -276,6 +288,7 @@ namespace Кликер
         private System.Windows.Forms.Label improveWorker;
         private System.Windows.Forms.Label improveTool;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
