@@ -161,5 +161,18 @@ namespace Кликер
 		{
 			Exit_Click(sender, e);
 		}
+
+		/// <summary>
+		/// событие загрузки формы.
+		/// </summary>
+		/// <remarks>
+		/// нужно для получения сохранений с памяти компа.
+		/// </remarks>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void Form1_Load(object sender, EventArgs e)
+		{
+			Saver.SetAll();
+		}
 	}
 }

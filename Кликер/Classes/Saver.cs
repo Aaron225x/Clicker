@@ -5,14 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using Кликер;
-using Кликер.Properties;
-using System.Configuration;
 using static Кликер.Properties.Settings; //сокращение для Settings.Default
 
 namespace Кликер.Classes
 {
-	class Saver : ApplicationSettingsBase
+	class Saver
 	{
 		private static readonly Form1 main = (Form1)GetForm("Form1"); //поле со значением первой формы.
 
@@ -21,8 +18,8 @@ namespace Кликер.Classes
 		/// </summary>
 		public static void SetAll()
 		{
-			if (main is null) { return; }
-			GetMain();
+			if (main is null) { return; } //если главная форма не открыта - выход из метода.
+			GetMain(); //установка полям 
 		}
 		/// <summary>
 		/// метод сохранения всех полей во всех формах.
@@ -33,25 +30,14 @@ namespace Кликер.Classes
 		public static void SaveAll()
 		{
 			if (main == null) { return; } //затычка на случай если нужная форма окажется закрыта.
-			SaveMain(); //сохранения полей 
-			Default.Save(); //сохранение.
-			
-
-
-
-			//Default.Initialize(Default.Context, Default.Properties, Default.Providers); //попытка создать файл с настройками (неудачно)
-			////попытка сохранить саму форму в настройки программы.
-			//Settings.Default.Form1 = main;
-			//Settings.Default.Save();
+			SaveMain(); //сохранения полей.
+			Default.Save(); //сохранение в память.
 		}
 		/// <summary>
 		/// сохранение значений полей в первой форме.
 		/// </summary>
 		public static void SaveMain()
 		{
-			//Form1 x = new Form1();
-			//Binding binding = new Binding();
-			//x.DataBindings.Add(,);
 			Default.money = main.Money;
 
 			Default.numberTool = main.NumberTool;
@@ -67,7 +53,7 @@ namespace Кликер.Classes
 		/// метод установки всем полям в главной форме значений из настроек.
 		/// </summary>
 		public static void GetMain()
-        {
+		{
 			main.Money = Default.money;
 
 			main.NumberTool = Default.numberTool;
