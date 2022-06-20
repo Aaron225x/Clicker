@@ -33,7 +33,7 @@ namespace Кликер
         private void TransitionMain(object sender, EventArgs e)
         {
             Hide();
-
+            for (int i = 0; i < Application.OpenForms.Count; i++) if (Application.OpenForms[i].Name == "Form1") Application.OpenForms[i].Show();
         }
     }
 }
