@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Timers;
 
+using Кликер.Classes; //подключение папки с классом.
+
 namespace Кликер
 {
 	public partial class Form1 : Form
