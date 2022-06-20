@@ -16,5 +16,24 @@ namespace Кликер
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// Закрывает все формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ClosingForms(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+        /// <summary>
+        /// Кнопка перехода в форму кликер
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TransitionMain(object sender, EventArgs e)
+        {
+            Hide();
+
+        }
     }
 }

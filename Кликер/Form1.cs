@@ -24,6 +24,9 @@ namespace Кликер
         private int incomeTool = 0; //Доход от обилки инструмент
         private int incomeWorker = 0; //Доход от обилки рабочий
 
+        public static Form1 frm = new Form1();
+        public static Achievements frm1 = new Achievements();
+
         public Form1()
         {
             InitializeComponent();
@@ -36,7 +39,7 @@ namespace Кликер
 
         }
         /// <summary>
-        /// Выход из программы
+        /// Кнопка выхода из программы
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -64,7 +67,11 @@ namespace Кликер
                 improveTool.Text = $"{number}x   {sum}$";
             }
         }
-
+        /// <summary>
+        /// Обилка рабочего
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ImproveWorkerButton_Click(object sender, EventArgs e)
         {
             if (money >= sumWorker)
@@ -89,6 +96,25 @@ namespace Кликер
         {
             money += incomeWorker;
             points.Text = $"{money}$"; //Обновляет статистику
+        }
+        /// <summary>
+        /// Кнопка перехода в форму достижения
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TransitionAchievements(object sender, EventArgs e)
+        {
+            Hide();
+            frm1.Show();
+        }
+        /// <summary>
+        /// Закрывает все формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ClosingForms(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
