@@ -16,16 +16,16 @@ namespace Кликер
 	public partial class Form1 : Form
 	{
 		#region fields
-		private int money = 0; //Деньги
+		private int money; //Деньги
 
-		private int numberTool = 0; //Номер обилки инструмента
-		private int numberWorker = 0; //Номер обилки рабочего
+		private int numberTool; //Номер обилки инструмента
+		private int numberWorker; //Номер обилки рабочего
 									  
-		private int sumTool = 10; //Сумма стоимости обилки инструмента
-		private int sumWorker = 100; //Сумма стоимости обилки рабочего
+		private int sumTool; //Сумма стоимости обилки инструмента
+		private int sumWorker; //Сумма стоимости обилки рабочего
 
-		private int incomeTool = 0; //Доход от обилки инструмент
-		private int incomeWorker = 0; //Доход от обилки рабочий
+		private int incomeTool; //Доход от обилки инструмент
+		private int incomeWorker; //Доход от обилки рабочий
 
 		public static Form1 frm = new Form1();
 		public static Achievements frm1 = new Achievements();
@@ -75,11 +75,26 @@ namespace Кликер
 			InitializeComponent();
 			frm = this;
 		}
-		private void Point_Click(object sender, EventArgs e)
+
+        /// <summary>
+        /// метод обновления значений в форме.
+        /// </summary>
+        public void Updater()
+        {
+            frm.points.Text = $"{money}$"; //Обновляет статистику
+			
+			improveTool.Text = $"{numberTool}x   {sumTool}$"; // строка123 --> поэтому я так и сделаю.
+
+			improveWorker.Text = $"{numberWorker}x   {sumWorker}$";
+		}
+
+        private void Point_Click(object sender, EventArgs e)
 		{
 			money += incomeTool;
 			money++;
-			points.Text = $"{money}$"; //Обновляет статистику
+			//points.Text = $"{money}$"; //Обновляет статистику
+
+			Updater();
 
 		}
 		/// <summary>
@@ -106,10 +121,12 @@ namespace Кликер
 				sumTool *= 2; //Цена на обилку умножается на два
 				numberTool++; //Сколько раз улучшил
 				incomeTool += 4; //+ 4 клика
-				points.Text = $"{money}$"; //Обновляет статистику
+				//points.Text = $"{money}$"; //Обновляет статистику
 				int number = numberTool;
 				int sum = sumTool;
-				improveTool.Text = $"{number}x   {sum}$";
+				//improveTool.Text = $"{number}x   {sum}$"; // (вдм) я не очень понял зачем тут переносить переменные, если можно сразу запихать поля.
+
+				Updater();
 			}
 		}
 		/// <summary>
@@ -125,10 +142,12 @@ namespace Кликер
 				sumWorker *= 2; //Цена на обилку умнодается на два
 				numberWorker++; //Сколько раз улучшил
 				incomeWorker += 4; //+ 4 клика
-				points.Text = $"{money}$"; //Обновляет статистику
+				//points.Text = $"{money}$"; //Обновляет статистику
 				int number = numberWorker;
 				int sum = sumWorker;
-				improveWorker.Text = $"{number}x   {sum}$";
+				//improveWorker.Text = $"{number}x   {sum}$";
+
+				Updater();
 
 			}
 		}
@@ -140,7 +159,9 @@ namespace Кликер
 		private void timer1_Tick(object sender, EventArgs e)
 		{
 			money += incomeWorker;
-			points.Text = $"{money}$"; //Обновляет статистику
+			//points.Text = $"{money}$"; //Обновляет статистику
+
+			Updater();
 		}
 		/// <summary>
 		/// Кнопка перехода в форму достижения
@@ -172,7 +193,8 @@ namespace Кликер
 		/// <param name="e"></param>
 		private void Form1_Load(object sender, EventArgs e)
 		{
-			Saver.SetAll();
+			Saver.SetAll(); //получение значений из памяти.
+			Updater(); //обновление значений в форме.
 		}
 	}
 }
