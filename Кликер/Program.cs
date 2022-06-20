@@ -4,6 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Кликер;
+using Кликер.Classes;
+
 namespace Кликер
 {
     static class Program

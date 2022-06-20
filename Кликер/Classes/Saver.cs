@@ -6,22 +6,72 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using Кликер;
+using Кликер.Properties;
+using static Кликер.Properties.Settings; //сокращение для Settings.Default
 
 namespace Кликер.Classes
 {
-	class Saver
+	static class Saver
 	{
+		private static readonly Form1 main = (Form1)GetForm("Form1"); //поле со значением первой формы.
+
 		/// <summary>
-		/// метод сохранения всех полей в формах.
+		/// метод получения значений из настроек.
+		/// </summary>
+		public static void SetAll()
+		{
+			if (main is null) { return; }
+			GetMain();
+		}
+		/// <summary>
+		/// метод сохранения всех полей во всех формах.
 		/// </summary>
 		/// <remarks>
 		/// сохраняет в Properties.Settings
 		/// </remarks>
 		public static void SaveAll()
 		{
-			Form1 main = (Form1)GetForm("Form1");
-			if (main == null) { } //затычка на случай если нужная форма окажется закрыта.
-			//main.Money
+			if (main == null) { return; } //затычка на случай если нужная форма окажется закрыта.
+			SaveMain(); //сохранения полей 
+			Default.Initialize(Default.Context); //making files on computer
+			Default.Save(); //сохранение.
+
+
+			////попытка сохранить саму форму в настройки программы.
+			//Settings.Default.Form1 = main;
+			//Settings.Default.Save();
+		}
+		/// <summary>
+		/// сохранение значений полей в первой форме.
+		/// </summary>
+		public static void SaveMain()
+		{
+			Default.money = main.Money;
+
+			Default.numberTool = main.NumberTool;
+			Default.numberWorker = main.NumberWorker;
+
+			Default.sumTool = main.SumTool;
+			Default.sumWorker = main.SumWorker;
+
+			Default.incomeTool = main.IncomeTool;
+			Default.incomeWorker = main.IncomeWorker;
+		}
+		/// <summary>
+		/// метод установки всем полям в главной форме значений из настроек.
+		/// </summary>
+		public static void GetMain()
+        {
+			main.Money = Default.money;
+
+			main.NumberTool = Default.numberTool;
+			main.NumberWorker = Default.numberWorker;
+
+			main.SumTool = Default.sumTool;
+			main.SumWorker = Default.sumWorker;
+
+			main.IncomeTool = Default.incomeTool;
+			main.IncomeWorker = Default.incomeWorker;
 		}
 		/// <summary>
 		/// поиск открытой формы по указанному имени в параметрах.

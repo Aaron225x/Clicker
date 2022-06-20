@@ -31,20 +31,49 @@ namespace Кликер
 		public static Achievements frm1 = new Achievements();
 		#endregion
 		#region properties
-		public int Money { get => money; }
+		public int Money 
+		{
+			get => money;
+			set => money = value;
+		}
 		
-		public int NumberTool { get => numberTool; }
-		public int NumberWorker { get => numberWorker; }
+		public int NumberTool
+		{
+			get => numberTool;
+			set => numberTool = value;
+		}
+		public int NumberWorker
+		{
+			get => numberWorker;
+			set => numberWorker = value;
+		}
 
-		public int SumTool { get => sumTool; }
-		public int SumWorker { get => sumWorker; }
+		public int SumTool
+		{
+			get => sumTool;
+			set => sumTool = value;
+		}
+		public int SumWorker
+		{
+			get => sumWorker;
+			set => sumWorker = value;
+		}
 
-		public int IncomeTool { get => incomeTool; }
-		public int IncomeWorker { get => incomeWorker; }
+		public int IncomeTool
+		{
+			get => incomeTool; 
+			set => incomeTool = value;
+		}
+		public int IncomeWorker
+		{
+			get => incomeWorker; 
+			set => incomeWorker = value;
+		}
 		#endregion
 		public Form1()
 		{
 			InitializeComponent();
+			frm = this;
 		}
 		private void Point_Click(object sender, EventArgs e)
 		{
@@ -60,6 +89,7 @@ namespace Кликер
 		/// <param name="e"></param>
 		private void Exit_Click(object sender, EventArgs e)
 		{
+			Saver.SaveAll();
 			Application.Exit();
 		}
 
@@ -129,7 +159,7 @@ namespace Кликер
 		/// <param name="e"></param>
 		private void ClosingForms(object sender, FormClosingEventArgs e)
 		{
-			Application.Exit();
+			Exit_Click(sender, e);
 		}
 	}
 }
