@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Кликер.Classes;
+
 namespace Кликер
 {
 	public partial class Achievements : Form
@@ -33,14 +35,7 @@ namespace Кликер
 		private void TransitionMain(object sender, EventArgs e)
 		{
 			Hide();
-			for (int i = 0; i < Application.OpenForms.Count; i++) //проход по всем открытм формам.
-			{
-				if (Application.OpenForms[i].Name == "Form1") //если нашли нужную открытую форму
-				{
-					Application.OpenForms[i].Show(); //показываем её.
-					return; //сворачиваем выполнение метода от лишних нагрузок.
-				}
-			}
+			Saver.GetForm("Form1").Show();
 		}
 	}
 }
