@@ -1,5 +1,5 @@
 ﻿
-namespace Кликер
+namespace Кликер.Forms
 {
     partial class Achievements
     {
