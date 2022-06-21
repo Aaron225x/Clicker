@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//подключение библиотек проекта в точку входа.
 using Кликер;
 using Кликер.Classes;
 using Кликер.Forms;

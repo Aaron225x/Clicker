@@ -14,6 +14,9 @@ using Кликер.Classes; //подключение папки с классо�
 
 namespace Кликер.Forms
 {
+	/// <summary>
+	/// класс главной формы.
+	/// </summary>
 	public partial class Form1 : Form
 	{
 		#region fields
@@ -28,8 +31,8 @@ namespace Кликер.Forms
 		private int incomeTool; //Доход от обилки инструмент
 		private int incomeWorker; //Доход от обилки рабочий
 
-		public static Form1 frm = new Form1();
-		public static Achievements frm1 = new Achievements();
+		public static Form1 frm;
+		public static Achievements frm1;
 		#endregion
 		#region properties
 		//свойства для доступа к полям. нужно для класса Saver
@@ -74,10 +77,14 @@ namespace Кликер.Forms
 		}
 		#endregion
 		#region constructors
+		/// <summary>
+		/// конструктор главной формы.
+		/// </summary>
 		public Form1()
 		{
 			InitializeComponent();
-			frm = this;
+			frm = this; //установка в поле с формой вызванную форму.
+			frm1 = new Achievements(); //установка в поле со второй формой конструктор второй формы.
 		}
 		#endregion
 		#region methods
@@ -89,11 +96,12 @@ namespace Кликер.Forms
 		{
 			points.Text = $"{money}$"; //Обновляет статистику
 			
-			improveTool.Text = $"{numberTool}x   {sumTool}$"; // строка123 --> поэтому я так и сделаю.
+			improveTool.Text = $"{numberTool}x   {sumTool}$"; // строка149 --> поэтому я так и сделаю.
 
 			improveWorker.Text = $"{numberWorker}x   {sumWorker}$";
 		}
 
+		//регион с обработчиками событий.
 		#region event handlers
 
 		/// <summary>
@@ -136,8 +144,8 @@ namespace Кликер.Forms
 				numberTool++; //Сколько раз улучшил
 				incomeTool += 4; //+ 4 клика
 				//points.Text = $"{money}$"; //Обновляет статистику
-				int number = numberTool;
-				int sum = sumTool;
+				//int number = numberTool;
+				//int sum = sumTool;
 				//improveTool.Text = $"{number}x   {sum}$"; // (вдм) я не очень понял зачем тут переносить переменные, если можно сразу запихать поля.
 
 				Updater();
@@ -157,8 +165,8 @@ namespace Кликер.Forms
 				numberWorker++; //Сколько раз улучшил
 				incomeWorker += 4; //+ 4 клика
 				//points.Text = $"{money}$"; //Обновляет статистику
-				int number = numberWorker;
-				int sum = sumWorker;
+				//int number = numberWorker;
+				//int sum = sumWorker;
 				//improveWorker.Text = $"{number}x   {sum}$";
 
 				Updater();
@@ -168,6 +176,10 @@ namespace Кликер.Forms
 		/// <summary>
 		/// Таймер для рабочего. Работает раз 1 секунду
 		/// </summary>
+		/// <remarks>
+		/// обновление значений на экране перенесено на отдельный таймер. <br/><br/>
+		/// обработчик таймера: <see cref="updatechecker_Tick(object, EventArgs)"/>
+		/// </remarks>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
 		private void timer1_Tick(object sender, EventArgs e)
@@ -175,7 +187,7 @@ namespace Кликер.Forms
 			money += incomeWorker;
 			//points.Text = $"{money}$"; //Обновляет статистику
 
-			//Updater();
+			//Updater(); //обновление информации перенесено в отдельный таймер.
 		}
 		/// <summary>
 		/// таймер для обновления значений.
@@ -188,7 +200,7 @@ namespace Кликер.Forms
 		}
 
 
-
+		//регион с закрытием, или сменой формы.
 		#region form close
 		/// <summary>
 		/// Кнопка перехода в форму достижения

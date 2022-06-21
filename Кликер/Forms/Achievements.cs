@@ -15,10 +15,16 @@ namespace Кликер.Forms
 {
 	public partial class Achievements : Form
 	{
+		#region constructors
+		/// <summary>
+		/// конструктор формы с ачивками.
+		/// </summary>
 		public Achievements()
 		{
 			InitializeComponent();
 		}
+		#endregion
+		#region event handler
 		/// <summary>
 		/// закрывает эту форму, и открывает главную форму.
 		/// </summary>
@@ -48,5 +54,6 @@ namespace Кликер.Forms
 			Hide();
 			Saver.GetForm("Form1").Show();
 		}
+		#endregion
 	}
 }
