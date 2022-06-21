@@ -1,5 +1,8 @@
 ﻿using System.Windows.Forms;
 
+using Кликер;
+using Кликер.Forms;
+
 using static Кликер.Properties.Settings; //сокращение для Settings.Default
 
 namespace Кликер.Classes
@@ -9,7 +12,7 @@ namespace Кликер.Classes
 		private static readonly Form1 main = (Form1)GetForm("Form1"); //поле со значением первой формы.
 
 		/// <summary>
-		/// метод получения значений из настроек.
+		/// метод установки значений из настроек.
 		/// </summary>
 		public static void SetAll()
 		{
@@ -83,6 +86,17 @@ namespace Кликер.Classes
 				}
 			}
 			return getter;
+		}
+		/// <summary>
+		/// метод закрытия всей программы.
+		/// </summary>
+		/// <remarks>
+		/// нужно для определённой последовательности действий перед закрытием программы.
+		/// </remarks>
+		public static void AppClose()
+		{
+			Saver.SaveAll();
+			Application.Exit();
 		}
 	}
 }
