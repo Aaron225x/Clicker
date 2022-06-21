@@ -7,7 +7,7 @@ using static Кликер.Properties.Settings; //сокращение для Set
 
 namespace Кликер.Classes
 {
-	class Saver
+	static class Saver
 	{
 		private static readonly Form1 main = (Form1)GetForm("Form1"); //поле со значением первой формы.
 		private static readonly Achievements achiv = (Achievements)GetForm("Achievements"); //поле со значением второй формы.
@@ -23,7 +23,7 @@ namespace Кликер.Classes
 		/// пример: (<see cref="Form1"/>)<see cref="GetForm"/>. <br/><br/>
 		/// но если открытая форма не нашлась, то возвращается <see langword="null"/>.
 		/// </returns>
-		public static Form GetForm(string name)
+		internal static Form GetForm(string name)
 		{
 			Form getter = null;
 			for (int i = 0; i < Application.OpenForms.Count; i++) //проход по всем открытм формам.
@@ -39,7 +39,7 @@ namespace Кликер.Classes
 		/// <summary>
 		/// метод установки значений из настроек.
 		/// </summary>
-		public static void SetAll()
+		internal static void SetAll()
 		{
 			if (main is null) { return; } //если главная форма не открыта - выход из метода.
 			GetMain(); //установка полям 
@@ -50,7 +50,7 @@ namespace Кликер.Classes
 		/// <remarks>
 		/// сохраняет в Properties.Settings
 		/// </remarks>
-		public static void SaveAll()
+		internal static void SaveAll()
 		{
 			if (main == null) { return; } //затычка на случай если нужная форма окажется закрыта.
 			SaveMain(); //сохранения полей.
@@ -59,7 +59,7 @@ namespace Кликер.Classes
 		/// <summary>
 		/// сохранение значений полей в первой форме.
 		/// </summary>
-		public static void SaveMain()
+		internal static void SaveMain()
 		{
 			Default.money = main.Money;
 
@@ -75,7 +75,7 @@ namespace Кликер.Classes
 		/// <summary>
 		/// метод установки всем полям в главной форме значений из настроек.
 		/// </summary>
-		public static void GetMain()
+		internal static void GetMain()
 		{
 			main.Money = Default.money;
 
@@ -94,7 +94,7 @@ namespace Кликер.Classes
 		/// <remarks>
 		/// нужно для определённой последовательности действий перед закрытием программы.
 		/// </remarks>
-		public static void AppClose()
+		internal static void AppClose()
 		{
 			Saver.SaveAll();
 			Application.Exit();

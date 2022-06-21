@@ -37,40 +37,40 @@ namespace Кликер.Forms
 		#region properties
 		//свойства для доступа к полям. нужно для класса Saver
 
-		public int Money 
+		internal int Money 
 		{
 			get => money;
 			set => money = value;
 		}
-		
-		public int NumberTool
+
+		internal int NumberTool
 		{
 			get => numberTool;
 			set => numberTool = value;
 		}
-		public int NumberWorker
+		internal int NumberWorker
 		{
 			get => numberWorker;
 			set => numberWorker = value;
 		}
 
-		public int SumTool
+		internal int SumTool
 		{
 			get => sumTool;
 			set => sumTool = value;
 		}
-		public int SumWorker
+		internal int SumWorker
 		{
 			get => sumWorker;
 			set => sumWorker = value;
 		}
 
-		public int IncomeTool
+		internal int IncomeTool
 		{
 			get => incomeTool; 
 			set => incomeTool = value;
 		}
-		public int IncomeWorker
+		internal int IncomeWorker
 		{
 			get => incomeWorker; 
 			set => incomeWorker = value;
