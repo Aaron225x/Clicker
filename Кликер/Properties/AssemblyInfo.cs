@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 // связанных со сборкой.
 [assembly: AssemblyTitle("Кликер")]
 [assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyConfiguration("Debug")]
 [assembly: AssemblyCompany("TeaTeam")]
 [assembly: AssemblyProduct("Кликер")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
