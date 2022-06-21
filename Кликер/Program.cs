@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 //подключение библиотек проекта в точку входа.
@@ -11,7 +8,7 @@ using Кликер.Forms;
 
 namespace Кликер
 {
-    static class Program
+    internal static class Program
     {
         /// <summary>
         /// Главная точка входа для приложения.

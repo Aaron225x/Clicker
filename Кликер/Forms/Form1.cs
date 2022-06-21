@@ -1,16 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Timers;
 
+//подключение пространств проекта.
 using Кликер;
-using Кликер.Classes; //подключение папки с классом.
+using Кликер.Classes; 
 
 namespace Кликер.Forms
 {
