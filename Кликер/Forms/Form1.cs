@@ -9,9 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Timers;
 
+using Кликер;
 using Кликер.Classes; //подключение папки с классом.
 
-namespace Кликер
+namespace Кликер.Forms
 {
 	public partial class Form1 : Form
 	{
@@ -31,6 +32,8 @@ namespace Кликер
 		public static Achievements frm1 = new Achievements();
 		#endregion
 		#region properties
+		//свойства для доступа к полям. нужно для класса Saver
+
 		public int Money 
 		{
 			get => money;
@@ -84,7 +87,7 @@ namespace Кликер
 		/// </summary>
 		public void Updater()
 		{
-			frm.points.Text = $"{money}$"; //Обновляет статистику
+			points.Text = $"{money}$"; //Обновляет статистику
 			
 			improveTool.Text = $"{numberTool}x   {sumTool}$"; // строка123 --> поэтому я так и сделаю.
 
@@ -93,15 +96,6 @@ namespace Кликер
 
 		#region event handlers
 
-		/// <summary>
-		/// таймер для обновления значений.
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		private void updatechecker_Tick(object sender, EventArgs e)
-		{
-			Updater();
-		}
 		/// <summary>
 		/// событие загрузки формы.
 		/// </summary>
@@ -184,6 +178,19 @@ namespace Кликер
 			//Updater();
 		}
 		/// <summary>
+		/// таймер для обновления значений.
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void updatechecker_Tick(object sender, EventArgs e)
+		{
+			Updater();
+		}
+
+
+
+		#region form close
+		/// <summary>
 		/// Кнопка перехода в форму достижения
 		/// </summary>
 		/// <param name="sender"></param>
@@ -200,7 +207,7 @@ namespace Кликер
 		/// <param name="e"></param>
 		private void ClosingForms(object sender, FormClosingEventArgs e)
 		{
-			Exit_Click(sender, e);
+			Saver.AppClose();
 		}
 		/// <summary>
 		/// Кнопка выхода из программы
@@ -209,12 +216,12 @@ namespace Кликер
 		/// <param name="e"></param>
 		private void Exit_Click(object sender, EventArgs e)
 		{
-			Saver.SaveAll();
-			Application.Exit();
+			Saver.AppClose();
 		}
+		#endregion forms
+
 		#endregion events
 
 		#endregion methods
-
 	}
 }
