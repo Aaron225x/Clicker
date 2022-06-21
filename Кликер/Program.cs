@@ -6,6 +6,7 @@ using System.Windows.Forms;
 
 using Кликер;
 using Кликер.Classes;
+using Кликер.Forms;
 
 namespace Кликер
 {
