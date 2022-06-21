@@ -70,42 +70,62 @@ namespace Кликер
 			set => incomeWorker = value;
 		}
 		#endregion
+		#region constructors
 		public Form1()
 		{
 			InitializeComponent();
 			frm = this;
 		}
+		#endregion
+		#region methods
 
-        /// <summary>
-        /// метод обновления значений в форме.
-        /// </summary>
-        public void Updater()
-        {
-            frm.points.Text = $"{money}$"; //Обновляет статистику
+		/// <summary>
+		/// метод обновления значений в форме.
+		/// </summary>
+		public void Updater()
+		{
+			frm.points.Text = $"{money}$"; //Обновляет статистику
 			
 			improveTool.Text = $"{numberTool}x   {sumTool}$"; // строка123 --> поэтому я так и сделаю.
 
 			improveWorker.Text = $"{numberWorker}x   {sumWorker}$";
 		}
 
-        private void Point_Click(object sender, EventArgs e)
+		#region event handlers
+
+		/// <summary>
+		/// таймер для обновления значений.
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void updatechecker_Tick(object sender, EventArgs e)
+		{
+			Updater();
+		}
+		/// <summary>
+		/// событие загрузки формы.
+		/// </summary>
+		/// <remarks>
+		/// нужно для получения сохранений с памяти компа.
+		/// </remarks>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void Form1_Load(object sender, EventArgs e)
+		{
+			Saver.SetAll(); //получение значений из памяти.
+			Updater(); //обновление значений в форме.
+		}
+		/// <summary>
+		/// обработчик события нажатия на главную кнопку.
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void Point_Click(object sender, EventArgs e)
 		{
 			money += incomeTool;
 			money++;
 			//points.Text = $"{money}$"; //Обновляет статистику
-
 			Updater();
-
-		}
-		/// <summary>
-		/// Кнопка выхода из программы
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		private void Exit_Click(object sender, EventArgs e)
-		{
-			Saver.SaveAll();
-			Application.Exit();
 		}
 
 		/// <summary>
@@ -161,7 +181,7 @@ namespace Кликер
 			money += incomeWorker;
 			//points.Text = $"{money}$"; //Обновляет статистику
 
-			Updater();
+			//Updater();
 		}
 		/// <summary>
 		/// Кнопка перехода в форму достижения
@@ -182,19 +202,19 @@ namespace Кликер
 		{
 			Exit_Click(sender, e);
 		}
-
 		/// <summary>
-		/// событие загрузки формы.
+		/// Кнопка выхода из программы
 		/// </summary>
-		/// <remarks>
-		/// нужно для получения сохранений с памяти компа.
-		/// </remarks>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
-		private void Form1_Load(object sender, EventArgs e)
+		private void Exit_Click(object sender, EventArgs e)
 		{
-			Saver.SetAll(); //получение значений из памяти.
-			Updater(); //обновление значений в форме.
+			Saver.SaveAll();
+			Application.Exit();
 		}
+		#endregion events
+
+		#endregion methods
+
 	}
 }

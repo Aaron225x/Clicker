@@ -45,6 +45,7 @@ namespace Кликер
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.points = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.updatechecker = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -249,6 +250,11 @@ namespace Кликер
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // updatechecker
+            // 
+            this.updatechecker.Enabled = true;
+            this.updatechecker.Tick += new System.EventHandler(this.updatechecker_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -293,6 +299,7 @@ namespace Кликер
         private System.Windows.Forms.Label improveTool;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Timer updatechecker;
     }
 }
 
