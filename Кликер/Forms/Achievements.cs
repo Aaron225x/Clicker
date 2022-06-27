@@ -15,9 +15,14 @@ namespace Кликер.Forms
 		public Achievements()
 		{
 			InitializeComponent();
+			label5.Text = ""; //очистка информации в лейбле.
 		}
 		#endregion
 		#region event handler
+		private void CheckUpdater(object sender, EventArgs e)
+		{
+			label5.Text = $"{ValuesTransfer.money}$";
+		}
 		/// <summary>
 		/// закрывает эту форму, и открывает главную форму.
 		/// </summary>

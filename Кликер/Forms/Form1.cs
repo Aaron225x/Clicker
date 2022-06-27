@@ -92,6 +92,10 @@ namespace Кликер.Forms
 			improveTool.Text = $"{numberTool}x   {sumTool}$"; // строка149 --> поэтому я так и сделаю.
 
 			improveWorker.Text = $"{numberWorker}x   {sumWorker}$";
+
+
+			//установка значений для остальных форм.
+			ValuesTransfer.GetValues();
 		}
 
 		//регион с обработчиками событий.

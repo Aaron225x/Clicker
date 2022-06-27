@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\ActiveForms.cs" />
+    <Compile Include="Classes\ValuesTransfer.cs" />
     <Compile Include="Forms\Achievements.cs">
       <SubType>Form</SubType>
     </Compile>
