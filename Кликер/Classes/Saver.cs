@@ -9,33 +9,9 @@ namespace Кликер.Classes
 {
 	static class Saver
 	{
-		private static readonly Form1 main = (Form1)GetForm("Form1"); //поле со значением первой формы.
-		private static readonly Achievements achiv = (Achievements)GetForm("Achievements"); //поле со значением второй формы.
+		private static readonly Form1 main = (Form1)ActiveForms.GetForm("Form1"); //поле со значением первой формы.
+		private static readonly Achievements achiv = (Achievements)ActiveForms.GetForm("Achievements"); //поле со значением второй формы.
 
-		/// <summary>
-		/// поиск открытой формы по указанному имени в параметрах.
-		/// </summary>
-		/// <param name="name">имя формы, которую надо найти.</param>
-		/// <returns>
-		/// если открытая форма нашлась, <br/>
-		/// то она возвращается типом <see cref="Form"/>, <br/>
-		/// после чего можно её явно преобразовать. <br/>
-		/// пример: (<see cref="Form1"/>)<see cref="GetForm"/>. <br/><br/>
-		/// но если открытая форма не нашлась, то возвращается <see langword="null"/>.
-		/// </returns>
-		internal static Form GetForm(string name)
-		{
-			Form getter = null;
-			for (int i = 0; i < Application.OpenForms.Count; i++) //проход по всем открытм формам.
-			{
-				if (Application.OpenForms[i].Name == name) //если нашли нужную открытую форму
-				{
-					getter = Application.OpenForms[i]; //сохраняем в отдельную переменную.
-					break; //сворачиваем выполнение цикла от лишних нагрузок.
-				}
-			}
-			return getter;
-		}
 		/// <summary>
 		/// метод установки значений из настроек.
 		/// </summary>

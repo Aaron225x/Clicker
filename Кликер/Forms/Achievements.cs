@@ -50,7 +50,7 @@ namespace Кликер.Forms
 		private void TransitionMain(object sender, EventArgs e)
 		{
 			Hide();
-			Saver.GetForm("Form1").Show();
+			ActiveForms.GetForm("Form1").Show();
 		}
 		#endregion
 	}

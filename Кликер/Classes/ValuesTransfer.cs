@@ -21,7 +21,7 @@ namespace Кликер.Classes
 
 		internal static void GetValues()
 		{
-			money = ((Form1)Saver.GetForm("Form1")).Money;
+			money = ((Form1)ActiveForms.GetForm("Form1")).Money;
 		}
 	}
 }
