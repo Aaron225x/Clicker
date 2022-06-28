@@ -115,16 +115,16 @@ namespace Кликер.Forms
 			this.tableLayoutPanel3.Location = new System.Drawing.Point(274, 167);
 			this.tableLayoutPanel3.Name = "tableLayoutPanel3";
 			this.tableLayoutPanel3.RowCount = 3;
-			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.29851F));
-			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38.80597F));
-			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.28986F));
-			this.tableLayoutPanel3.Size = new System.Drawing.Size(131, 67);
+			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32.46753F));
+			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35.06493F));
+			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32.46753F));
+			this.tableLayoutPanel3.Size = new System.Drawing.Size(131, 77);
 			this.tableLayoutPanel3.TabIndex = 1;
 			// 
 			// improveWorkerButton
 			// 
 			this.improveWorkerButton.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.improveWorkerButton.Location = new System.Drawing.Point(3, 30);
+			this.improveWorkerButton.Location = new System.Drawing.Point(3, 28);
 			this.improveWorkerButton.Name = "improveWorkerButton";
 			this.improveWorkerButton.Size = new System.Drawing.Size(125, 20);
 			this.improveWorkerButton.TabIndex = 0;
@@ -139,7 +139,7 @@ namespace Кликер.Forms
 			this.improveWorker.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.improveWorker.Location = new System.Drawing.Point(3, 0);
 			this.improveWorker.Name = "improveWorker";
-			this.improveWorker.Size = new System.Drawing.Size(125, 27);
+			this.improveWorker.Size = new System.Drawing.Size(125, 25);
 			this.improveWorker.TabIndex = 1;
 			this.improveWorker.Text = "0x   100$";
 			this.improveWorker.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -153,18 +153,18 @@ namespace Кликер.Forms
 			this.tableLayoutPanel4.Location = new System.Drawing.Point(138, 167);
 			this.tableLayoutPanel4.Name = "tableLayoutPanel4";
 			this.tableLayoutPanel4.RowCount = 3;
-			this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38.80597F));
-			this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.29851F));
-			this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.28986F));
-			this.tableLayoutPanel4.Size = new System.Drawing.Size(130, 67);
+			this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.76624F));
+			this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35.06493F));
+			this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32.46753F));
+			this.tableLayoutPanel4.Size = new System.Drawing.Size(130, 77);
 			this.tableLayoutPanel4.TabIndex = 2;
 			// 
 			// improveToolButton
 			// 
 			this.improveToolButton.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.improveToolButton.Location = new System.Drawing.Point(3, 29);
+			this.improveToolButton.Location = new System.Drawing.Point(3, 28);
 			this.improveToolButton.Name = "improveToolButton";
-			this.improveToolButton.Size = new System.Drawing.Size(124, 21);
+			this.improveToolButton.Size = new System.Drawing.Size(124, 20);
 			this.improveToolButton.TabIndex = 0;
 			this.improveToolButton.Text = "Апгрейд клика";
 			this.improveToolButton.UseVisualStyleBackColor = true;
@@ -177,7 +177,7 @@ namespace Кликер.Forms
 			this.improveTool.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.improveTool.Location = new System.Drawing.Point(3, 0);
 			this.improveTool.Name = "improveTool";
-			this.improveTool.Size = new System.Drawing.Size(124, 26);
+			this.improveTool.Size = new System.Drawing.Size(124, 25);
 			this.improveTool.TabIndex = 1;
 			this.improveTool.Text = "0x   10$";
 			this.improveTool.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
