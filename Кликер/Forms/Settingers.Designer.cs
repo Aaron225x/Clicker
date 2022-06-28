@@ -57,10 +57,10 @@ namespace Кликер.Forms
 			this.checkBox1.AutoSize = true;
 			this.checkBox1.Checked = true;
 			this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-			this.checkBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.checkBox1.Dock = System.Windows.Forms.DockStyle.Top;
 			this.checkBox1.Location = new System.Drawing.Point(4, 4);
 			this.checkBox1.Name = "checkBox1";
-			this.checkBox1.Size = new System.Drawing.Size(135, 22);
+			this.checkBox1.Size = new System.Drawing.Size(135, 17);
 			this.checkBox1.TabIndex = 0;
 			this.checkBox1.Text = "скрывать окна";
 			this.checkBox1.UseVisualStyleBackColor = true;
@@ -68,10 +68,10 @@ namespace Кликер.Forms
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.label1.Dock = System.Windows.Forms.DockStyle.Top;
 			this.label1.Location = new System.Drawing.Point(146, 1);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(354, 28);
+			this.label1.Size = new System.Drawing.Size(354, 26);
 			this.label1.TabIndex = 1;
 			this.label1.Text = "при открытии другого окна этой программы, открытое окно будет скрываться.";
 			// 
