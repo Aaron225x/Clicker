@@ -28,7 +28,7 @@ namespace Кликер.Forms
 		public static Achievements frm1;
 		#endregion
 		#region properties
-		//свойства для доступа к полям. нужно для класса Saver
+		//свойства для доступа к полям. нужно для других форм или сохранений значений на диске.
 
 		internal int Money 
 		{

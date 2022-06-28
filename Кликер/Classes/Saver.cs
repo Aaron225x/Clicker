@@ -4,7 +4,6 @@ using Кликер;
 using Кликер.Forms;
 
 using static Кликер.Properties.Settings; //сокращение для Settings.Default
-
 namespace Кликер.Classes
 {
 	static class Saver
