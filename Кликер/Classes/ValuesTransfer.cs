@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-//использование папки с формами.
-using Кликер.Forms;
+﻿using Кликер.Forms;
 
 namespace Кликер.Classes
 {

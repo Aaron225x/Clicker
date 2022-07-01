@@ -3,7 +3,6 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
-using Кликер;
 using Кликер.Classes;
 using Кликер.Properties;
 
@@ -23,7 +22,7 @@ namespace Кликер.Forms
 	public partial class Achievements : Form
 	{
 		#region fields
-		private static string galochka = "✔";
+		private readonly static string galochka = "✔";
 		#endregion
 		#region props
 		/// <summary>
@@ -82,6 +81,7 @@ namespace Кликер.Forms
 				FARLabel.Text = galochka;
 			}
 		}
+
 		#region event handler
 		/// <summary>
 		/// обновление значений на форме.
@@ -105,16 +105,10 @@ namespace Кликер.Forms
 		/// <param name="e"></param>
 		private void ClosingForms(object sender, FormClosingEventArgs e) 
 		{
-					// // попытка сделать открытие главной формы, без потери этой формы в памяти открытых форм.
-					//this.Hide(); //при закрытии формы, она больше не открывается.
-					//Saver.GetForm("Form1").Show(); //так как при нажатии на крестик закрылась эта форма, её не надо скрывать. поэтому мы сразу открываем главную форму.
-
-				//Application.Exit(); // Закрывает все формы // <--- комментарий оставленный на всякий случай
-
+			//при закрытии формы на крестик, эта форма не удаляется из списка открытых форм, а лишь скрывается.
 			Hide(); //скрытие этой формы.
 			((Form1)ActiveForms.GetForm("Form1")).Show(); //открытие основной формы.
 
-			//Saver.AppClose(); //отдельный метод закрытия программы.
 		}
 		/// <summary>
 		/// Кнопка перехода в форму кликер
@@ -123,19 +117,24 @@ namespace Кликер.Forms
 		/// <param name="e"></param>
 		private void TransitionMain(object sender, EventArgs e)
 		{
-			Hide();
-			((Form1)ActiveForms.GetForm("Form1")).Show();
+			Hide(); //скрытие этого окна
+			((Form1)ActiveForms.GetForm("Form1")).Show(); //открытие главной формы.
 		}
+		#endregion events
+		#region overrides
 		/// <summary>
 		/// переопределение метода вызываемого при закрытии формы.
 		/// </summary>
 		/// <param name="e"></param>
 		protected override void OnClosing(CancelEventArgs e)
 		{
-			base.OnClosing(e);
-			e.Cancel = true;
+			//при нажатии на крестик в форме, перед её закрытием вызывается этот метод.
+			//при помощи переопределния его, можно отменить закрытие формы, и, лишь, скрыть её.
+			base.OnClosing(e);  //вызов базового метода Form.OnClosing()
+			e.Cancel = true; //отмена закрытия формы.
 		}
-		#endregion
-		#endregion
+		#endregion over
+
+		#endregion methds
 	}
 }

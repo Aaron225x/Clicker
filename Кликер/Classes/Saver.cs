@@ -1,27 +1,38 @@
 ﻿using System.Windows.Forms;
 
-using Кликер;
 using Кликер.Forms;
-using Кликер.Properties;
+using static Кликер.Properties.Settings; //сокращение для Кликер.Properties.Settings.Default
 
-using static Кликер.Properties.Settings; //сокращение для Settings.Default
 namespace Кликер.Classes
 {
 	static class Saver
 	{
-		private static readonly Form1 main = (Form1)ActiveForms.GetForm("Form1"); //поле со значением первой формы.
-		private static readonly Achievements achiv = (Achievements)ActiveForms.GetForm("Achievements"); //поле со значением второй формы.
-		private static readonly Settingers sttns = (Settingers)ActiveForms.GetForm("Settingers"); //поле со значением третьей формы.
-
+		#region fields
 		/// <summary>
-		/// метод установки значений из настроек.
+		/// поле со значением первой формы.
 		/// </summary>
-		internal static void SetAll()
-		{
-			if (main is null) { return; } //если главная форма не открыта - выход из метода.
-			GetSettings();
-			GetMain(); //установка полям 
-		}
+		/// <remarks>
+		/// главная форма.
+		/// </remarks>
+		private static readonly Form1 main = (Form1)ActiveForms.GetForm("Form1");
+		/// <summary>
+		/// поле со значением второй формы.
+		/// </summary>
+		/// <remarks>
+		/// форма с достижениями.
+		/// </remarks>
+		private static readonly Achievements achiv = (Achievements)ActiveForms.GetForm("Achievements");
+		/// <summary>
+		/// поле со значением третьей формы.
+		/// </summary>
+		/// <remarks>
+		/// форма с настройками.
+		/// </remarks>
+		private static readonly Settingers sttns = (Settingers)ActiveForms.GetForm("Settingers");
+		#endregion
+		#region methods
+
+		#region Save
 		/// <summary>
 		/// метод сохранения всех полей во всех формах.
 		/// </summary>
@@ -32,7 +43,7 @@ namespace Кликер.Classes
 		{
 			if (main == null) { return; } //затычка на случай если нужная форма окажется закрыта.
 			SaveMain(); //сохранения полей.
-			SaveSettings();
+			SaveSettings(); //сохранение значений настроек.
 			Default.Save(); //сохранение в память.
 		}
 		/// <summary>
@@ -41,13 +52,6 @@ namespace Кликер.Classes
 		internal static void SaveSettings()
 		{
 			Default.Hider = HideForms;
-		}
-		/// <summary>
-		/// установка значений из третьей формы.
-		/// </summary>
-		internal static void GetSettings()
-		{
-			HideForms = Default.Hider;
 		}
 		/// <summary>
 		/// сохранение значений полей в первой форме.
@@ -65,6 +69,24 @@ namespace Кликер.Classes
 			Default.incomeTool = main.IncomeTool;
 			Default.incomeWorker = main.IncomeWorker;
 		}
+		#endregion sv
+		#region Get
+		/// <summary>
+		/// метод установки значений из настроек.
+		/// </summary>
+		internal static void SetAll()
+		{
+			if (main is null) { return; } //если главная форма не открыта - выход из метода.
+			GetSettings(); //установка значений для формы с настройками.
+			GetMain(); //установка полям в главной форме.
+		}
+		/// <summary>
+		/// установка значений из третьей формы.
+		/// </summary>
+		internal static void GetSettings()
+		{
+			HideForms = Default.Hider;
+		}
 		/// <summary>
 		/// метод установки всем полям в главной форме значений из настроек.
 		/// </summary>
@@ -81,6 +103,8 @@ namespace Кликер.Classes
 			main.IncomeTool = Default.incomeTool;
 			main.IncomeWorker = Default.incomeWorker;
 		}
+		#endregion gt
+
 		/// <summary>
 		/// метод закрытия всей программы.
 		/// </summary>
@@ -92,5 +116,7 @@ namespace Кликер.Classes
 			Saver.SaveAll();
 			Application.Exit();
 		}
+
+		#endregion mtds
 	}
 }

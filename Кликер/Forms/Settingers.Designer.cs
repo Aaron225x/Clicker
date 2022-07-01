@@ -87,7 +87,7 @@ namespace Кликер.Forms
 			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
 			this.Text = "Настройки";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Settingers_FormClosing);
-			this.Load += new System.EventHandler(this.trying);
+			this.Load += new System.EventHandler(this.GetSets);
 			this.tableLayoutPanel1.ResumeLayout(false);
 			this.tableLayoutPanel1.PerformLayout();
 			this.ResumeLayout(false);

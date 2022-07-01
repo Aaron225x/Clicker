@@ -1,16 +1,17 @@
-﻿using Кликер;
-using Кликер.Classes;
-using Кликер.Forms;
+﻿using Кликер.Forms;
 namespace Кликер.Properties 
 {
 	/// <summary>
-	/// класс с настройками.
+	/// класс с настройками всей программы.
 	/// </summary>
 	/// <remarks>
-	/// форме с настройками это <see cref="Settingers"/>. этот класс нужен для доступа к настройкам со всех форм.
+	/// для формы с настройками (<see cref="Settingers"/>). этот класс нужен для доступа к настройкам со всех форм.
 	/// </remarks>
 	internal sealed partial class Settings 
 	{
+		/// <summary>
+		/// поле настройки "скрывать окна".
+		/// </summary>
 		private static bool hideForms;
 		/// <summary>
 		/// настройка "скрывать окна".
@@ -21,7 +22,7 @@ namespace Кликер.Properties
 			set => hideForms = value;
 		}
 	}
-}
+} //изначальный код с этого класса был выброшен за код. \/
 
 // Этот класс позволяет обрабатывать определенные события в классе параметров:
 //  Событие SettingChanging возникает перед изменением значения параметра.

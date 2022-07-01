@@ -2,8 +2,6 @@
 using System.Windows.Forms;
 
 //подключение библиотек проекта в точку входа.
-using Кликер;
-using Кликер.Classes;
 using Кликер.Forms;
 
 namespace Кликер
