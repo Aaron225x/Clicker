@@ -3,7 +3,8 @@ using System.Windows.Forms;
 
 //подключение пространств проекта.
 using Кликер;
-using Кликер.Classes; 
+using Кликер.Classes;
+using Кликер.Properties;
 
 namespace Кликер.Forms
 {
@@ -26,6 +27,7 @@ namespace Кликер.Forms
 
 		public static Form1 frm;
 		public static Achievements frm1;
+		public static Settingers frm2;
 		#endregion
 		#region properties
 		//свойства для доступа к полям. нужно для других форм или сохранений значений на диске.
@@ -78,6 +80,7 @@ namespace Кликер.Forms
 			InitializeComponent();
 			frm = this; //установка в поле с формой вызванную форму.
 			frm1 = new Achievements(); //установка в поле со второй формой конструктор второй формы.
+			frm2 = new Settingers();
 		}
 		#endregion
 		#region methods
@@ -206,8 +209,18 @@ namespace Кликер.Forms
 		/// <param name="e"></param>
 		private void TransitionAchievements(object sender, EventArgs e)
 		{
-			Hide();
+			if (Settings.HideForms) Hide();
 			frm1.Show();
+		}
+		/// <summary>
+		/// кнопка перехода в форму настроек.
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void OpenSetts(object sender, EventArgs e)
+		{
+			if (Settings.HideForms) Hide();
+			frm2.Show();
 		}
 		/// <summary>
 		/// Закрывает все формы
@@ -232,5 +245,6 @@ namespace Кликер.Forms
 		#endregion events
 
 		#endregion methods
+
 	}
 }

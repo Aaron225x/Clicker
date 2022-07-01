@@ -1,9 +1,11 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
 using Кликер;
 using Кликер.Classes;
+using Кликер.Properties;
 
 namespace Кликер.Forms
 {
@@ -109,7 +111,10 @@ namespace Кликер.Forms
 
 				//Application.Exit(); // Закрывает все формы // <--- комментарий оставленный на всякий случай
 
-			Saver.AppClose(); //отдельный метод закрытия программы.
+			Hide(); //скрытие этой формы.
+			((Form1)ActiveForms.GetForm("Form1")).Show(); //открытие основной формы.
+
+			//Saver.AppClose(); //отдельный метод закрытия программы.
 		}
 		/// <summary>
 		/// Кнопка перехода в форму кликер
@@ -119,7 +124,16 @@ namespace Кликер.Forms
 		private void TransitionMain(object sender, EventArgs e)
 		{
 			Hide();
-			ActiveForms.GetForm("Form1").Show();
+			((Form1)ActiveForms.GetForm("Form1")).Show();
+		}
+		/// <summary>
+		/// переопределение метода вызываемого при закрытии формы.
+		/// </summary>
+		/// <param name="e"></param>
+		protected override void OnClosing(CancelEventArgs e)
+		{
+			base.OnClosing(e);
+			e.Cancel = true;
 		}
 		#endregion
 		#endregion

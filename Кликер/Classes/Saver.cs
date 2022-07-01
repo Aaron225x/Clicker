@@ -2,6 +2,7 @@
 
 using Кликер;
 using Кликер.Forms;
+using Кликер.Properties;
 
 using static Кликер.Properties.Settings; //сокращение для Settings.Default
 namespace Кликер.Classes
@@ -10,6 +11,7 @@ namespace Кликер.Classes
 	{
 		private static readonly Form1 main = (Form1)ActiveForms.GetForm("Form1"); //поле со значением первой формы.
 		private static readonly Achievements achiv = (Achievements)ActiveForms.GetForm("Achievements"); //поле со значением второй формы.
+		private static readonly Settingers sttns = (Settingers)ActiveForms.GetForm("Settingers"); //поле со значением третьей формы.
 
 		/// <summary>
 		/// метод установки значений из настроек.
@@ -17,6 +19,7 @@ namespace Кликер.Classes
 		internal static void SetAll()
 		{
 			if (main is null) { return; } //если главная форма не открыта - выход из метода.
+			GetSettings();
 			GetMain(); //установка полям 
 		}
 		/// <summary>
@@ -29,7 +32,22 @@ namespace Кликер.Classes
 		{
 			if (main == null) { return; } //затычка на случай если нужная форма окажется закрыта.
 			SaveMain(); //сохранения полей.
+			SaveSettings();
 			Default.Save(); //сохранение в память.
+		}
+		/// <summary>
+		/// сохранение значений полей в третьей форме.
+		/// </summary>
+		internal static void SaveSettings()
+		{
+			Default.Hider = HideForms;
+		}
+		/// <summary>
+		/// установка значений из третьей формы.
+		/// </summary>
+		internal static void GetSettings()
+		{
+			HideForms = Default.Hider;
 		}
 		/// <summary>
 		/// сохранение значений полей в первой форме.

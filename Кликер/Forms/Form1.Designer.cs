@@ -42,12 +42,12 @@ namespace Кликер.Forms
 			this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
 			this.clear = new System.Windows.Forms.Button();
 			this.button1 = new System.Windows.Forms.Button();
+			this.button2 = new System.Windows.Forms.Button();
+			this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
 			this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
 			this.points = new System.Windows.Forms.Label();
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
 			this.updatechecker = new System.Windows.Forms.Timer(this.components);
-			this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-			this.button2 = new System.Windows.Forms.Button();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.tableLayoutPanel2.SuspendLayout();
 			this.tableLayoutPanel3.SuspendLayout();
@@ -126,7 +126,7 @@ namespace Кликер.Forms
 			this.improveWorkerButton.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.improveWorkerButton.Location = new System.Drawing.Point(3, 28);
 			this.improveWorkerButton.Name = "improveWorkerButton";
-			this.improveWorkerButton.Size = new System.Drawing.Size(125, 20);
+			this.improveWorkerButton.Size = new System.Drawing.Size(125, 21);
 			this.improveWorkerButton.TabIndex = 0;
 			this.improveWorkerButton.Text = "Апгрейд рабочего";
 			this.improveWorkerButton.UseVisualStyleBackColor = true;
@@ -220,6 +220,24 @@ namespace Кликер.Forms
 			this.button1.UseVisualStyleBackColor = true;
 			this.button1.Click += new System.EventHandler(this.TransitionAchievements);
 			// 
+			// button2
+			// 
+			this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.button2.Location = new System.Drawing.Point(3, 29);
+			this.button2.Name = "button2";
+			this.button2.Size = new System.Drawing.Size(123, 20);
+			this.button2.TabIndex = 0;
+			this.button2.Text = "Настройки";
+			this.button2.UseVisualStyleBackColor = true;
+			this.button2.Click += new System.EventHandler(this.OpenSetts);
+			// 
+			// flowLayoutPanel1
+			// 
+			this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 85);
+			this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+			this.flowLayoutPanel1.Size = new System.Drawing.Size(129, 76);
+			this.flowLayoutPanel1.TabIndex = 4;
+			// 
 			// tableLayoutPanel6
 			// 
 			this.tableLayoutPanel6.ColumnCount = 3;
@@ -260,23 +278,6 @@ namespace Кликер.Forms
 			this.updatechecker.Enabled = true;
 			this.updatechecker.Tick += new System.EventHandler(this.updatechecker_Tick);
 			// 
-			// flowLayoutPanel1
-			// 
-			this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 85);
-			this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-			this.flowLayoutPanel1.Size = new System.Drawing.Size(129, 76);
-			this.flowLayoutPanel1.TabIndex = 4;
-			// 
-			// button2
-			// 
-			this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.button2.Location = new System.Drawing.Point(3, 29);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(123, 20);
-			this.button2.TabIndex = 0;
-			this.button2.Text = "Настройки";
-			this.button2.UseVisualStyleBackColor = true;
-			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,9 +286,10 @@ namespace Кликер.Forms
 			this.ClientSize = new System.Drawing.Size(414, 506);
 			this.Controls.Add(this.tableLayoutPanel1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.Location = new System.Drawing.Point(700, 243);
 			this.MaximizeBox = false;
 			this.Name = "Form1";
-			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
 			this.Text = "Кликер";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ClosingForms);
 			this.Load += new System.EventHandler(this.Form1_Load);
