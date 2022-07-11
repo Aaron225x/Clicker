@@ -140,6 +140,7 @@ namespace Кликер.Forms
 			// 
 			this.SAMLabel.AutoSize = true;
 			this.SAMLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.SAMLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
 			this.SAMLabel.Location = new System.Drawing.Point(4, 1);
 			this.SAMLabel.Name = "SAMLabel";
 			this.SAMLabel.Size = new System.Drawing.Size(117, 32);
