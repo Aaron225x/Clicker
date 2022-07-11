@@ -122,6 +122,7 @@ namespace Кликер.Forms
 			// 
 			// tableLayoutPanel3
 			// 
+			this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
 			this.tableLayoutPanel3.ColumnCount = 2;
 			this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.66666F));
 			this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -139,11 +140,11 @@ namespace Кликер.Forms
 			// 
 			this.SAMLabel.AutoSize = true;
 			this.SAMLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.SAMLabel.Location = new System.Drawing.Point(3, 0);
+			this.SAMLabel.Location = new System.Drawing.Point(4, 1);
 			this.SAMLabel.Name = "SAMLabel";
-			this.SAMLabel.Size = new System.Drawing.Size(119, 34);
+			this.SAMLabel.Size = new System.Drawing.Size(117, 32);
 			this.SAMLabel.TabIndex = 0;
-			this.SAMLabel.Text = "рр";
+			this.SAMLabel.Text = "набрать 10к$";
 			this.SAMLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// SARLabel
@@ -151,9 +152,9 @@ namespace Кликер.Forms
 			this.SARLabel.AutoSize = true;
 			this.SARLabel.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.SARLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.SARLabel.Location = new System.Drawing.Point(128, 0);
+			this.SARLabel.Location = new System.Drawing.Point(128, 1);
 			this.SARLabel.Name = "SARLabel";
-			this.SARLabel.Size = new System.Drawing.Size(57, 34);
+			this.SARLabel.Size = new System.Drawing.Size(56, 32);
 			this.SARLabel.TabIndex = 1;
 			this.SARLabel.Text = "1000$";
 			this.SARLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

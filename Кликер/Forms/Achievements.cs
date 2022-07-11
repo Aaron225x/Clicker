@@ -58,27 +58,30 @@ namespace Кликер.Forms
 			NumberTool = ValuesTransfer.NumberTool;
 			NumberWorker = ValuesTransfer.NumberWorker;
 		}
-		//проверки достижений.
 		/// <summary>
-		/// проверка первого достижения.
+		/// установка обозначения успешного выполнения достижения.
 		/// </summary>
-		/// <returns>возвращается <see langword="true"/>, если условие для первого достижения выполнилось,
-		/// иначе возвращается <see langword="false"/>.</returns>
-		private bool CheckFirst()
+		/// <remarks>
+		/// при <paramref name="check"/> равном <see langword="true"/>
+		/// устанавливается зелёный цвет текста указанным лейблам <paramref name="Message"/> и <paramref name="Reward"/>,
+		/// также лейблу <paramref name="Reward"/> устанавливается "галочка". <br/><br/>
+		/// <paramref name="GetReward"/> --> вызов метод получения вознаграждения. <br/>
+		/// указываются методы, или лямбда-выражения с типом void и без параметров. <br/>
+		/// пример метода: <c> void Reward() </c> <br/>
+		/// пример ввода метода в параметры: <c> Reward </c>
+		/// </remarks>
+		/// <param name="check">условие достижения.</param>
+		/// <param name="Message"><see cref="Label"/> с условием достижения.</param>
+		/// <param name="Reward"><see cref="Label"/> с наградой достижения.</param>
+		/// <param name="GetReward">метод получения вознаграждения при выполнении условия.</param>
+		private void AchivementComplete(bool check, Label Message, Label Reward, Action GetReward)
 		{
-			if (NumberTool == 0) return false; //оказывается я не увидел полное задание с достижения. // && NumberWorker == 0
-			return true;
-		}
-		/// <summary>
-		/// установка значений при для первого достижения.
-		/// </summary>
-		private void SetFirst()
-		{
-			if (CheckFirst())
+			if (check)
 			{
-				FAMLabel.ForeColor = Color.Green;
-				FARLabel.ForeColor = Color.Green;
-				FARLabel.Text = galochka;
+				Message.ForeColor = Color.Green; //установка зелёного цвета текста для сообщения.
+				Reward.ForeColor = Color.Green; //установка зелёного цвета для текста с наградой.
+				Reward.Text = galochka; //замена текста лейбла с наградой на галочку.
+				GetReward?.Invoke(); //вызов метода получения награды.
 			}
 		}
 
@@ -91,7 +94,8 @@ namespace Кликер.Forms
 		private void Updater(object sender, EventArgs e)
 		{
 			CheckUpdates(); //проверка изменений.
-			SetFirst(); //проверка и установка первого достижения.
+			AchivementComplete(NumberTool != 0, FAMLabel, FARLabel, () => { /* тело метода. например: Money += 100; , но так, чтобы это было известно во всей форме. */ }); //проверка и установка первого достижения.
+			AchivementComplete(Money >= 10000, SAMLabel, SARLabel, () => { }/* или же вместо этой конструкции сюда можно вписать название отдельного метода. например: Reward*/); //проверка и установка второго достижения.
 			moneyLabel.Text = $"{Money}$"; //обновление значений в этой форме.
 		}
 		/// <summary>
