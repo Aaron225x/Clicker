@@ -66,7 +66,7 @@ namespace Кликер.Forms
 		/// иначе возвращается <see langword="false"/>.</returns>
 		private bool CheckFirst()
 		{
-			if (NumberTool == 0 && NumberWorker == 0) return false;
+			if (NumberTool == 0) return false; //оказывается я не увидел полное задание с достижения. // && NumberWorker == 0
 			return true;
 		}
 		/// <summary>

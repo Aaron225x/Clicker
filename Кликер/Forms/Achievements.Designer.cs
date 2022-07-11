@@ -51,8 +51,8 @@ namespace Кликер.Forms
 			// 
 			this.tableLayoutPanel1.ColumnCount = 5;
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.722561F));
-			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.06722F));
-			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.42254F));
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.59504F));
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.61157F));
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.06722F));
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.720459F));
 			this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 1);
@@ -91,7 +91,7 @@ namespace Кликер.Forms
 			this.tableLayoutPanel2.Name = "tableLayoutPanel2";
 			this.tableLayoutPanel2.RowCount = 1;
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-			this.tableLayoutPanel2.Size = new System.Drawing.Size(187, 34);
+			this.tableLayoutPanel2.Size = new System.Drawing.Size(205, 34);
 			this.tableLayoutPanel2.TabIndex = 0;
 			// 
 			// FAMLabel
@@ -102,9 +102,9 @@ namespace Кликер.Forms
 			this.FAMLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
 			this.FAMLabel.Location = new System.Drawing.Point(4, 1);
 			this.FAMLabel.Name = "FAMLabel";
-			this.FAMLabel.Size = new System.Drawing.Size(116, 32);
+			this.FAMLabel.Size = new System.Drawing.Size(128, 32);
 			this.FAMLabel.TabIndex = 0;
-			this.FAMLabel.Text = "Купить первое улучшения инструмента";
+			this.FAMLabel.Text = "Купить первое улучшение инструмента";
 			this.FAMLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// FARLabel
@@ -113,9 +113,9 @@ namespace Кликер.Forms
 			this.FARLabel.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.FARLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.FARLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-			this.FARLabel.Location = new System.Drawing.Point(127, 1);
+			this.FARLabel.Location = new System.Drawing.Point(139, 1);
 			this.FARLabel.Name = "FARLabel";
-			this.FARLabel.Size = new System.Drawing.Size(56, 32);
+			this.FARLabel.Size = new System.Drawing.Size(62, 32);
 			this.FARLabel.TabIndex = 1;
 			this.FARLabel.Text = "100$";
 			this.FARLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -132,7 +132,7 @@ namespace Кликер.Forms
 			this.tableLayoutPanel3.Name = "tableLayoutPanel3";
 			this.tableLayoutPanel3.RowCount = 1;
 			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-			this.tableLayoutPanel3.Size = new System.Drawing.Size(187, 34);
+			this.tableLayoutPanel3.Size = new System.Drawing.Size(188, 34);
 			this.tableLayoutPanel3.TabIndex = 1;
 			// 
 			// SAMLabel
@@ -141,7 +141,7 @@ namespace Кликер.Forms
 			this.SAMLabel.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.SAMLabel.Location = new System.Drawing.Point(3, 0);
 			this.SAMLabel.Name = "SAMLabel";
-			this.SAMLabel.Size = new System.Drawing.Size(118, 34);
+			this.SAMLabel.Size = new System.Drawing.Size(119, 34);
 			this.SAMLabel.TabIndex = 0;
 			this.SAMLabel.Text = "рр";
 			this.SAMLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -151,7 +151,7 @@ namespace Кликер.Forms
 			this.SARLabel.AutoSize = true;
 			this.SARLabel.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.SARLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.SARLabel.Location = new System.Drawing.Point(127, 0);
+			this.SARLabel.Location = new System.Drawing.Point(128, 0);
 			this.SARLabel.Name = "SARLabel";
 			this.SARLabel.Size = new System.Drawing.Size(57, 34);
 			this.SARLabel.TabIndex = 1;
@@ -188,7 +188,7 @@ namespace Кликер.Forms
 			// 
 			this.moneyLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.moneyLabel.AutoSize = true;
-			this.moneyLabel.Location = new System.Drawing.Point(300, 0);
+			this.moneyLabel.Location = new System.Drawing.Point(301, 0);
 			this.moneyLabel.Name = "moneyLabel";
 			this.moneyLabel.Size = new System.Drawing.Size(155, 13);
 			this.moneyLabel.TabIndex = 3;
